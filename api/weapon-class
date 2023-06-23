@@ -1,0 +1,77 @@
+const express = require("express");
+const router = express.Router();
+
+
+// api/weapon-class
+router.get("/", (req, res, next) => {
+    console.log("This is the Weapon Class route");
+    res.send("WEAPONS");
+});
+
+// api/weapon-class/greatsword
+
+router.get("/great-sword", (req, res, next) => {
+    console.log("GREATSWORD");
+    const weapon = {weapon_name: "amatu's roilcloud sword", atk: "360", element_status: "58(water)", affinity: "-25%", slots: "0"};
+    const jsonObj = JSON.stringify(weapon);
+    res.send(jsonObj)
+});
+
+
+// api/weapon-class/sword-and-shield
+
+router.get("/sword-and-shield", (req, res, next) => {
+    console.log("SWORD-AND-SHIELD")
+    const weapon = {weapon_name: "katkus geledihen", atk: "310", element_status: "40(fire)", affinity: "15%", slots: "3"};
+    const jsonObj = JSON.stringify(weapon);
+    res.send(jsonObj);
+});
+
+// api/weapon-class/long-sword
+
+router.get("/long-sword", (req, res, next) => {
+    console.log("LONG-SWORD")
+    const weapon = {weapon_name: "Megrez's Asterism", atk: "330", element_status: "14(poison)", affinity: "0%", slots: "0"};
+    const jsonObj = JSON.stringify(weapon);
+    res.send(jsonObj);
+});
+
+// api/weapon-class/dual-blades
+
+router.get("/dual-blades", (req, res, next) => {
+    console.log("DUAL-BLADES")
+    const weapon = {weapon_name: "Magma Shredders", atk: "300", element_status: "64(fire)", affinity: "0%", slots: "0"};
+    const jsonObj = JSON.stringify(weapon);
+    res.send(jsonObj);
+});
+
+
+router.get("/hammer", (req, res, next) => {
+    console.log("HAMMER")
+    const weapon = {weapon_name: "katkus geledihen", atk: "320", element_status: "40(fire)", affinity: "15%", slots: "3"};
+    const jsonObj = JSON.stringify(weapon);
+    res.send(jsonObj);
+});
+
+router.get("/test", (req, res, next) => {
+    res.set('Content-Type', 'text/html');
+    res.send('<img src="" alt="img"> </img>');
+});
+
+
+// router.get("/sword-and-shield", (req, res, next) => {
+//     console.log("SWORD-AND-SHIELD")
+//     const weapon = {weapon_name: "katkus geledihen", atk: "310", element: "40(fire)", affinity: "15%", slots: "3"};
+//     const jsonObj = JSON.stringify(weapon);
+//     res.send(jsonObj);
+// });
+
+
+// router.get("/sword-and-shield", (req, res, next) => {
+//     console.log("SWORD-AND-SHIELD")
+//     const weapon = {weapon_name: "katkus geledihen", atk: "310", element: "40(fire)", affinity: "15%", slots: "3"};
+//     const jsonObj = JSON.stringify(weapon);
+//     res.send(jsonObj);
+// });
+
+module.exports = router;
